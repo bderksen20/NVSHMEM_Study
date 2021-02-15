@@ -17,5 +17,6 @@ cd ~/NVSHMEM_Study/mpi_cuda
 
 echo "Testing OpenMPI Hello World!!!"
 
-# Compile / launch program
+# Launch program
+mpirun -np 4 ./base_mmult_2sd
 
