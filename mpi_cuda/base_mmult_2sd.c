@@ -1,10 +1,12 @@
-/*  MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI
+/*  MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI MPI
 
-    Bill Derksen - CS1645 HPC - Assignment #4
-    11/1/20
-
-    Parallelized MMULT Matrix Multiplication w/ MPI
-
+    Bill Derksen
+    Parallelized MMULT Matrix Multiplication w/ MPI 2-sided
+    
+    TODO: 
+    - why is this in C?
+    - use openmpi instead of mpich for IB support
+    - test on clusters
 */
 
 /* Compilation:    /usr/lib64/mpich/bin/mpicc mpi_program.c -o mpi_program
@@ -39,9 +41,6 @@
         MPI_Status*     status_p    (in)
         MPI_Datatype    type        (in)
         int*            count_p     (in)
-
-
-
 */
 
 #include <stdio.h>
