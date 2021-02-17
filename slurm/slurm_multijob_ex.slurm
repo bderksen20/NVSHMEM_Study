@@ -15,7 +15,7 @@ cd ~/NVSHMEM_Study/mpi_cuda
 
 echo "Testing OpenMPI Hello World!!!"
 
-# Launch program
+# TODO: fix... this is broken
 for i in 1 2 4 8;
 do
 	sbatch --nodes $i --output test_$inodes.txt mpirun -np $i ./base_mmult_2sd
