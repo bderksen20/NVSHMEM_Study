@@ -4,9 +4,8 @@
     Parallelized MMULT Matrix Multiplication w/ MPI 2-sided
     
     TODO: 
-    - why is this in C?
-    - use openmpi instead of mpich for IB support
-    - test on clusters
+    - use openmpi instead of mpich for IB support --> DONE, works fine
+    - test on clusters --> DONE, works fine
 */
 
 /* Compilation:    /usr/lib64/mpich/bin/mpicc mpi_program.c -o mpi_program
