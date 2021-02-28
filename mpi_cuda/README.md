@@ -9,10 +9,7 @@
    - [CUDA-Aware OpenMPI Setup](https://kose-y.github.io/blog/2017/12/installing-cuda-aware-mpi/)  
    - Using OpenMPI, build must be configured in order for the "awareness" to work. Build with --> ./configure --with-cuda  
               > *is CRC openmpi already CUDA configured???? can check at compile time, goto openmpi doc*  
-   - Check with:
-     ```
-     ompi_info --parsable -l 9 --all | grep mpi_built_with_cuda_support:value
-     ```
+   - Check with: `ompi_info --parsable -l 9 --all | grep mpi_built_with_cuda_support:value`
              
 #### Program Flow Notes:  
    - [Helpful Video](https://www.youtube.com/watch?v=kIgbQQXbnto)
