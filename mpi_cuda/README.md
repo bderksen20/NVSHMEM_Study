@@ -22,8 +22,10 @@ Some notes on everything involved in setting up and running CUDA-Aware MPI progr
 #### Cluster/Compilation Notes:
    - [Bridges-2 User Guide](https://www.psc.edu/resources/bridges-2/user-guide-2/#intro)
    - Load modules: `modle load openmpi gcc cuda`
-   - Compiling cluster_tests.c: `mpicc cluster_tests.c -o cluster_tests `
-   - Launch interactive instance with 2 nodes, 2 GPUs on each for 30 min: `interact -p GPU --gres=gpu:2 -N 2 -t 30:00`
+   - Compiling cluster_tests.c (includes mpi & cuda code): `mpicc cluster_tests.c -o cluster_tests -lcudart`
+     > Good idea to have seperate MPI & CUDA files (main and kernel, etc.), seperately compile (mpicc & nvcc), and link for larger apps
+   - Launch interactive instance with 2 nodes, 8 GPUs on each for 30 min: `interact -p GPU --gres=gpu:8 -N 2 -t 30:00`
+   - Run cluster_tests: `mpiexec -np 4 ./cluster_tests`
  
 
 
