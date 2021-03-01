@@ -6,9 +6,9 @@
 */
 
 // cuda+mpi
-#include "cuda.h"
+//#include "cuda.h"
 #include "hwloc.h"
-#include "cuda_runtime.h"
+#include <cuda_runtime.h>
 #include "device_launch_parameters.h"
 #include "mpi.h"
 
