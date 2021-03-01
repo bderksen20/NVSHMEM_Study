@@ -12,8 +12,8 @@
 
 //std
 #include <stdio.h>
-#include <iostream>
-#include <stdexcept>
+#include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char* argv[]) {
 
@@ -25,7 +25,8 @@ int main(int argc, char* argv[]) {
 	cudaGetDeviceCount(&n_devices);
 	cudaSetDevice(local_rank % n_devices);
 
-	cout << "Cuda device count: " << n_devices << "\n";
+	printf("Cuda device count : %d\n", n_devices);
+	//cout << "Cuda device count: " << n_devices << "\n";
 
 	// MPI Init...
 	int size, rank;
@@ -34,7 +35,8 @@ int main(int argc, char* argv[]) {
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);	/* get current process (not thread) id */
 
 	// Print rank / device pair
-	cout << "Hello cluster, from rank " << rank << " on device " << (local_rank % n_devices) << "\n";
+	//cout << "Hello cluster, from rank " << rank << " on device " << (local_rank % n_devices) << "\n";
+	printf("Hello cluster, from rank %d on device %d!!!\n", rank, (local_rank % n_devices);
 
 	// MPI FINALIZE
 	MPI_Finalize();
