@@ -1,5 +1,7 @@
 # CUDA Aware MPI Notes/Documentation
  
+Some notes on everything involved in setting up and running CUDA-Aware MPI programs on clusters.  
+
 #### Resources used:  
    - [CUDA-Aware MPI NVIDIA Dev Notes](https://developer.nvidia.com/blog/introduction-cuda-aware-mpi/)  
    - [CUDA-Aware MPI NVIDIA Example](https://github.com/NVIDIA-developer-blog/code-samples/blob/master/posts/cuda-aware-mpi-example/src/CUDA_Aware_MPI.c)
@@ -17,6 +19,12 @@
    
    1. Need to setup a global rank/topology for process mapping on cluster (we are spanning multiple nodes which may contain multiple GPUs)
 
+#### Cluster/Compilation Notes:
+   - [Bridges-2 User Guide](https://www.psc.edu/resources/bridges-2/user-guide-2/#intro)
+   - Load modules: `modle load openmpi gcc cuda`
+   - Compiling cluster_tests.c: `mpicc cluster_tests.c -o cluster_tests `
+   - Launch interactive instance with 2 nodes, 2 GPUs on each for 30 min: `interact -p GPU --gres=gpu:2 -N 2 -t 30:00`
+ 
 
-#### Compilation Notes:
+
 
