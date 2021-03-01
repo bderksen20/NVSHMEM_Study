@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
 
 	// Print rank / device pair
 	//cout << "Hello cluster, from rank " << rank << " on device " << (local_rank % n_devices) << "\n";
-	printf("Hello cluster, from rank %d on device %d!!!\n", rank, (local_rank % n_devices);
+	printf("Hello cluster, from rank %d on device %d!!!\n", rank, (local_rank % n_devices));
 
 	// MPI FINALIZE
 	MPI_Finalize();
