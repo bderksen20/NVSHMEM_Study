@@ -15,7 +15,7 @@ Some notes on everything involved in setting up and running CUDA-Aware MPI progr
    - Check with: `ompi_info --parsable -l 9 --all | grep mpi_built_with_cuda_support:value`
              
 #### Program Flow Notes:  
-   - [Helpful Video](https://www.youtube.com/watch?v=kIgbQQXbnto)
+   - [Multi GPU Programming with MPI](https://developer.nvidia.com/gtc/2020/video/s21067)
    
    1. Need to setup a global rank/topology for process mapping on cluster (we are spanning multiple nodes which may contain multiple GPUs)
 
